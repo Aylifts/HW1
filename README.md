@@ -8,6 +8,8 @@ Fall 2024
 
 ## Instructions
 
+### Testing Testing
+
 In this assignment, you will implement the A* algorithm in Python, and apply it to the problem below. The helper code you need is provided on Canvas, you just need to fill in the missing parts.
 
 You need to implement:
