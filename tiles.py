@@ -67,7 +67,17 @@ class TilesNode:
         return new_state
 
     def get_children(self) -> list["TilesNode"]:
-        
+        emptycord = self.find_empty_space()
+        de_list = []
+        if emptycord[0] != 3:
+            de_list.append(self.swap_tiles(emptycord[0], emptycord[1], emptycord[0]+1, emptycord[1]))
+        if emptycord[0] != 0:
+            de_list.append(self.swap_tiles(emptycord[0], emptycord[1], emptycord[0]-1, emptycord[1]))
+        if emptycord[1] != 3:
+            de_list.append(self.swap_tiles(emptycord[0], emptycord[1], emptycord[0], emptycord[1]+1))
+        if emptycord[1] != 0:
+            de_list.append(self.swap_tiles(emptycord[0], emptycord[1], emptycord[0], emptycord[1]-1))
+        return de_list
         raise NotImplementedError("Implement this function as part of the assignment.")
 
     def __str__(self):
